@@ -6,12 +6,14 @@ import { NativeWindStyleSheet } from "nativewind";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Homepage from "./screens/Homepage";
 import Profile from "./screens/Profile";
+import SignIn from "./screens/SignIn";
+import Welcome from "./screens/Welcome";
 
 const App = () => {
   return (
     <View className="flex-1">
       {/* <Homepage /> */}
-      <Profile />
+      <Welcome />
       <StatusBar style="light" />
     </View>
   );
