@@ -12,21 +12,21 @@ import { FontAwesome5 } from "@expo/vector-icons";
 const data = [
   {
     id: "1",
-    imageSource: require("../assets/promo.jpg"), // Replace with your image source
+    imageSource: require("../../assets/promo.jpg"), // Replace with your image source
     text: "Double your Deposit",
     text2: "100% on real account with deposit from $10- $500",
     time: "00:42:51",
   },
   {
     id: "2",
-    imageSource: require("../assets/promo2.jpg"), // Replace with your image source
+    imageSource: require("../../assets/promo2.jpg"), // Replace with your image source
     text: "Low intrest Loans",
     text2: "100% on real account with deposit from $10- $500",
     time: "05:07:08",
   },
   {
     id: "3",
-    imageSource: require("../assets/promo3.jpg"), // Replace with your image source
+    imageSource: require("../../assets/promo3.jpg"), // Replace with your image source
     text: "Asset Managment",
     text2: "100% on real account with deposit from $10- $500",
     time: "28:46:00",

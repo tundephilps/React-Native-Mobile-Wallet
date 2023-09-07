@@ -1,15 +1,15 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Stats from "../components/Stats";
-import Select from "../components/Select";
-import List from "../components/List";
-import Promo from "../components/Promo";
+import Stats from "../components/Homepage/Stats";
+import Select from "../components/Homepage/Select";
+import List from "../components/Homepage/List";
+import Promo from "../components/Homepage/Promo";
 
 const Homepage = () => {
   return (
-    <View className="flex-1 bg-zinc-900">
+    <View className="flex-1 bg-zinc-900 pb-16">
       <SafeAreaView>
         <View className="flex flex-row justify-between px-8">
           <View className="flex flex-row">
@@ -37,9 +37,12 @@ const Homepage = () => {
         </View>
 
         {/* Stats */}
-        <Stats />
-        <List />
-        <Promo />
+        <ScrollView>
+          <Stats />
+          <List />
+          <Promo />
+          <View className="h-40"></View>
+        </ScrollView>
       </SafeAreaView>
     </View>
   );

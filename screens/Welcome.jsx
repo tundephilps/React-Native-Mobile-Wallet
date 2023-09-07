@@ -4,7 +4,7 @@ import React from "react";
 import { useFonts } from "expo-font";
 const Welcome = () => {
   const [fontsLoaded] = useFonts({
-    Exo: require("../assets/fonts/Exo.ttf"),
+    RockSalt: require("../assets/fonts/RockSalt-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -23,11 +23,8 @@ const Welcome = () => {
           source={require("../assets/logo2.png")}
         />
       </View>
-      <Text
-        className="  text-4xl text-blue-400 "
-        style={{ fontFamily: "Exo", fontWeight: 700 }}
-      >
-        OptimumPay
+      <Text className="  text-blue-400 " style={styles.write}>
+        Optimum Pay
       </Text>
     </ImageBackground>
   );
@@ -35,4 +32,10 @@ const Welcome = () => {
 
 export default Welcome;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  write: {
+    fontFamily: "RockSalt",
+    fontSize: 32,
+    fontWeight: "600",
+  },
+});

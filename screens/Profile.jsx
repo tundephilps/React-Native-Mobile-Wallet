@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 
 import { Ionicons } from "@expo/vector-icons";
-import Settings from "../components/Settings";
+import Settings from "../components/Profile/Settings";
 
 const Profile = () => {
   return (

@@ -1,7 +1,7 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/SignUp/LoginForm";
 
 const SignIn = () => {
   return (

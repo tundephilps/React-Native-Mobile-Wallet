@@ -77,7 +77,7 @@ export default function Settings() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 24,
+    padding: 18,
   },
   title: {
     fontSize: 32,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#3c404a",
     borderRadius: 12,
-    padding: 16,
+    padding: 12,
   },
   statsItem: {
     marginTop: 16,
