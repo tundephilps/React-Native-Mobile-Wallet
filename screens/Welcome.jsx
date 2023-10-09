@@ -1,8 +1,16 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
+
+import { useNavigation } from "@react-navigation/native";
 
 import { useFonts } from "expo-font";
 const Welcome = () => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => navigation.navigate("SignIn"), 2500);
+  }, []);
+
   const [fontsLoaded] = useFonts({
     RockSalt: require("../assets/fonts/RockSalt-Regular.ttf"),
   });

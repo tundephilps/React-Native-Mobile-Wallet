@@ -6,10 +6,12 @@ import Stats from "../components/Homepage/Stats";
 import Select from "../components/Homepage/Select";
 import List from "../components/Homepage/List";
 import Promo from "../components/Homepage/Promo";
+import { StatusBar } from "expo-status-bar";
 
 const Homepage = () => {
   return (
     <View className="flex-1 bg-zinc-900 pb-16">
+      <StatusBar style="light" backgroundColor=" rgb(24 24 27)" />
       <SafeAreaView>
         <View className="flex flex-row justify-between px-8">
           <View className="flex flex-row">

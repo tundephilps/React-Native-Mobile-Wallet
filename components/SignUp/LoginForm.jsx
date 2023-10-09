@@ -7,8 +7,10 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function LoginForm() {
+  const navigation = useNavigation();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -52,11 +54,7 @@ export default function LoginForm() {
         </View>
 
         <View style={styles.formAction}>
-          <TouchableOpacity
-            onPress={() => {
-              // handle onPress
-            }}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate("BottomTabs")}>
             <View style={styles.btn}>
               <Text style={styles.btnText}>Sign in</Text>
             </View>

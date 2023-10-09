@@ -1,14 +1,22 @@
 import CustomBottomTab from "../components/BottomTabs/CustomBottomTab";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Cart from "../screens/Cart";
-import Favourites from "../screens/Favourites";
 import Homepage from "../screens/Homepage";
 import Profile from "../screens/Profile";
 import Transactions from "../screens/Transactions";
+import CustomerCare from "../screens/CustomerCare";
+import ChatScreen from "../screens/ChatScreen";
+import {
+  getFocusedRouteNameFromRoute,
+  useNavigation,
+} from "@react-navigation/native";
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
+  const navigation = useNavigation();
+
+  navigation.getParent()?.setOptions({ tabBarStyle: { display: "none" } });
+
   return (
     <Tab.Navigator tabBar={(props) => <CustomBottomTab {...props} />}>
       <Tab.Group
@@ -28,9 +36,19 @@ const BottomTabs = () => {
         />
 
         <Tab.Screen
-          options={{ tabBarLabel: "Favourites" }}
+          options={({ route }) => ({
+            tabBarLabel: "Call Care",
+            tabBarVisible: false,
+            tabBarStyle: {
+              visibility: "hidden",
+              zIndex: 0.1,
+              display: "none",
+            }, // Hide the tab bar for this screen
+            tabBarButton: (props) => null,
+            href: null,
+          })}
           name="Favourites"
-          component={Favourites}
+          component={ChatScreen}
         />
         <Tab.Screen
           options={{ tabBarLabel: "Profile" }}

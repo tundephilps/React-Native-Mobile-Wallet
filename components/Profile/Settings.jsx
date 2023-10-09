@@ -50,9 +50,9 @@ export default function Settings() {
   return (
     <View style={styles.container}>
       <View style={styles.stats}>
-        {items.map(({ icon, backgroundColor, color, label, value }, index) => (
+        {items.map(({ icon, backgroundColor, color, value }, index) => (
           <TouchableOpacity
-            key={label}
+            key={value} // Use 'value' instead of 'label' as the key
             onPress={() => {
               // handle onPress
             }}

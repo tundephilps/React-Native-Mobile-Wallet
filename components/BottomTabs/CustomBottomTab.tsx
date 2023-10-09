@@ -35,7 +35,7 @@ export const CustomBottomTab: FC<BottomTabBarProps> = ({
       case "Cart":
         return "shopping-bag";
       case "Favourites":
-        return "star";
+        return "message-square";
       case "Profile":
         return "user";
       default:
