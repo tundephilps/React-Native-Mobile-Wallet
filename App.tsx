@@ -28,7 +28,7 @@ const App = () => {
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Investment" component={Investment} />
-          {/* <Stack.Screen name="TopUp" component={TopUp} />
+          <Stack.Screen name="TopUp" component={TopUp} />
           <Stack.Screen name="Payment" component={Payment} />
           <Stack.Screen name="Welcome" component={Welcome} />
 
@@ -38,7 +38,7 @@ const App = () => {
 
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
           <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="SignUp" component={SignUp} /> */}
+          <Stack.Screen name="SignUp" component={SignUp} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
