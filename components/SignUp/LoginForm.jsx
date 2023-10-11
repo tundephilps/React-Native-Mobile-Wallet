@@ -61,14 +61,15 @@ export default function LoginForm() {
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity
-          onPress={() => {
-            // handle link
-          }}
-        >
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
           <Text style={styles.formFooter}>
             Don't have an account?{" "}
-            <Text style={{ textDecorationLine: "underline" }}>Sign up</Text>
+            <Text
+              style={{ textDecorationLine: "underline" }}
+              onPress={() => navigation.navigate("SignUp")}
+            >
+              Sign up
+            </Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -78,7 +79,7 @@ export default function LoginForm() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 24,
+    paddingHorizontal: 15,
   },
   header: {
     marginVertical: 16,

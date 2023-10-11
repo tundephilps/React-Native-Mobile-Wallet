@@ -20,16 +20,6 @@ const ChatScreen = () => {
             "https://icon2.cleanpng.com/20180319/cke/kisspng-human-behavior-microphone-neck-vision-care-communi-customer-service-5ab04233660053.7040382215215007234178.jpg",
         },
       },
-      {
-        _id: 2,
-        text: "Hello world",
-        createdAt: new Date(),
-        user: {
-          _id: 1,
-          name: "React Native",
-          avatar: "https://placeimg.com/140/140/any",
-        },
-      },
     ]);
   }, []);
 
@@ -86,7 +76,7 @@ const ChatScreen = () => {
   };
 
   return (
-    <View style={{ backgroundColor: "black", height: "85%" }}>
+    <View style={{ height: "85%" }} className="bg-zinc-900">
       <GiftedChat
         messages={messages}
         renderSend={renderSend}

@@ -11,6 +11,10 @@ import SignIn from "./screens/SignIn";
 import Call from "./screens/Call";
 import Homepage from "./screens/Homepage";
 import ChatScreen from "./screens/ChatScreen";
+import SignUp from "./screens/SignUp";
+import Payment from "./screens/Payment";
+import TopUp from "./screens/TopUp";
+import Investment from "./screens/Investment";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,13 +27,18 @@ const App = () => {
           initialRouteName="Welcome"
           screenOptions={{ headerShown: false }}
         >
+          <Stack.Screen name="Investment" component={Investment} />
+          {/* <Stack.Screen name="TopUp" component={TopUp} />
+          <Stack.Screen name="Payment" component={Payment} />
           <Stack.Screen name="Welcome" component={Welcome} />
 
           <Stack.Screen name="BottomTabs" component={BottomTabs} />
-          <Stack.Screen name="SignIn" component={SignIn} />
+
           <Stack.Screen name="Call" component={Call} />
 
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
+          <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="SignUp" component={SignUp} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

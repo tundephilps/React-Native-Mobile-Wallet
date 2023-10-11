@@ -20,7 +20,9 @@ const Homepage = () => {
               style={{ height: 30, width: 30 }}
               resizeMode="contain"
             />
-            <Text className="text-2xl text-white">OptimumPay</Text>
+            <Text className="text-2xl text-white font-semibold">
+              OptimumPay
+            </Text>
           </View>
           <View>
             <Ionicons name="settings" size={24} color="white" />
