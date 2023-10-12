@@ -75,7 +75,7 @@ const Payment = () => {
           </View>
         </View>
 
-        <View>
+        <View style={{ padding: 15 }}>
           <View
             style={{
               display: "flex",

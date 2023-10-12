@@ -19,6 +19,18 @@ const data = [
     imageSource: require("../assets/commodities.png"),
   },
   { id: 2, text: "ETF", imageSource: require("../assets/cloud.png") },
+
+  { id: 3, text: "Oil & Gas", imageSource: require("../assets/oil.png") },
+
+  { id: 4, text: "Gold", imageSource: require("../assets/gold.png") },
+
+  { id: 5, text: "BlockChain", imageSource: require("../assets/bitcoin.png") },
+
+  { id: 6, text: "Tech & AI", imageSource: require("../assets/tech.png") },
+
+  { id: 7, text: "Health", imageSource: require("../assets/Health.png") },
+
+  { id: 8, text: "Agriculture", imageSource: require("../assets/agric.png") },
   // Add more data items as needed
 ];
 
