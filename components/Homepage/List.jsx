@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
@@ -6,13 +6,25 @@ import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const List = () => {
+  const navigation = useNavigation();
   return (
-    <View className="px-8">
+    <View className="flex items-center justify-center">
       <Text className="text-white text-2xl font-normal">Payment List</Text>
-      <View className="flex flex-row flex-wrap items-center  py-2 gap-3">
-        <View className="flex-col gap-2 items-center">
+      <View className="flex flex-row flex-wrap items-center justify-center py-2 gap-3">
+        <TouchableOpacity
+          className="flex-col gap-2 items-center"
+          onPress={() => navigation.navigate("Airtime")}
+        >
+          <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
+            <Entypo name="mobile" size={24} color="blue" />
+          </View>
+          <Text className="text-gray-400 font-normal">Airtime</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity className="flex-col gap-2 items-center">
           <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
             <MaterialCommunityIcons
               name="lightning-bolt"
@@ -21,13 +33,17 @@ const List = () => {
             />
           </View>
           <Text className="text-gray-400 font-normal">Electricity</Text>
-        </View>
-        <View className="flex-col gap-2 items-center">
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          className="flex-col gap-2 items-center"
+          onPress={() => navigation.navigate("Internet")}
+        >
           <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
             <Feather name="wifi" size={24} color="cyan" />
           </View>
           <Text className="text-gray-400 font-normal">Internet</Text>
-        </View>
+        </TouchableOpacity>
         <View className="flex-col gap-2 items-center">
           <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
             <Ionicons name="md-wallet" size={24} color="green" />
@@ -46,12 +62,7 @@ const List = () => {
           </View>
           <Text className="text-gray-400 font-normal">Merchant</Text>
         </View>
-        <View className="flex-col gap-2 items-center">
-          <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
-            <Entypo name="mobile" size={24} color="blue" />
-          </View>
-          <Text className="text-gray-400 font-normal">Top-Up</Text>
-        </View>
+
         <View className="flex-col gap-2 items-center">
           <View className="flex items-center justify-center px-3 bg-slate-800 h-14 w-14 rounded-md">
             <Octicons name="checklist" size={24} color="yellow" />
